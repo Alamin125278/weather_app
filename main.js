@@ -8,7 +8,7 @@ const search = document.querySelector('#search')
 const getWeather = async (city) => {
     // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&app id=${API_KEY}&units=metric`;
     weather.innerHTML =`<h2>Loading...</h2>`
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=metric`;
     const response = await fetch(url)
     const data = await response.json()
     return showWearher(data);
